@@ -57,7 +57,7 @@ export class ListasComponent  implements OnInit {
   }
   
   eliminarLista(listaItem: Lista) {
-    console.log("Eliminar lista:", listaItem);
+    this.listaService.eliminarLista(listaItem);
   }
 
   listaSeleccionada(listaItem: Lista) {
