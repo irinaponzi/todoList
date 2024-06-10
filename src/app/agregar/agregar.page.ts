@@ -73,11 +73,13 @@ export class AgregarPage implements OnInit {
             if (esValido){
               actividad.descripcion = data.titulo,
               this.listaService.guardarStorage();
+              this.listaService.presentToast('Actividad editada correctamente!');
             }
           }
         }
       ]
     })
+    await alerta.present();
   }
 
   eliminar(actividad: Actividad) {
