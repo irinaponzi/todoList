@@ -81,7 +81,8 @@ export class AgregarPage implements OnInit {
   }
 
   eliminar(actividad: Actividad) {
-    this.lista.item = this.lista.item.filter((item)=> item !== actividad);
+    let listaModificada = this.lista.item.filter((item)=> item !== actividad);
+    this.lista.item = listaModificada
     this.listaService.guardarStorage();
   }
 
